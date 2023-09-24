@@ -55,6 +55,8 @@ export class CartService {
     } else {
       this.removeCartItem(product);
     }
+    this.productList.next(this.cartItemList);
+    this.getTotalPrice();
   }
 
   getTotalPrice(): number {
