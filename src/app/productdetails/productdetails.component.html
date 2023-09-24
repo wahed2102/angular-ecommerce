@@ -1,0 +1,30 @@
+<section class="flex">
+  <img
+    [src]="product.image"
+    [alt]="product.title"
+    class="h-[500px] max-w-[500px] block"
+  />
+  <div>
+    <div>
+      <p>{{ product.title }}</p>
+      <p>{{ product.rating.rate }} {{ product.rating.count }}</p>
+      <p>&#8377; {{ product.price }}</p>
+      <p>{{ product.description }}</p>
+      <p><span class="font-bold">Category : </span>{{ product.category }}</p>
+    </div>
+    <hr />
+    <div class="flex font-bold">
+      <button (click)="increaseDecrease(-1)">-</button>
+      <span class="px-4">{{ quantity }}</span>
+      <button (click)="increaseDecrease(1)">+</button>
+    </div>
+    <div>
+      <button
+        class="uppercase py-2 px-4 bg-[#763173] text-white font-semibold rounded"
+        (click)="addToCart()"
+      >
+        Add to Cart
+      </button>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,20 @@
+<nav class="container mx-auto text-3xl p-4 text-[#763173]">
+  <div class="flex justify-between">
+    <a routerLink="/"
+      ><img
+        src="assets/FakeStoreLogo.png"
+        alt="Fake Store Logo"
+        class="w-[50px]"
+    /></a>
+    <a routerLink="/cart" class=""
+      >Cart
+      <span class="relative pr-4"
+        ><i class="fa-solid fa-cart-shopping"></i>
+        <span
+          class="bg-gray-600 text-white p-[5px] rounded-full text-xs absolute right-2 -top-1"
+          >{{ total }}</span
+        ></span
+      >
+    </a>
+  </div>
+</nav>
